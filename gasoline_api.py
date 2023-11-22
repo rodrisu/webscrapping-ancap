@@ -1,9 +1,12 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 import requests
 from bs4 import BeautifulSoup
 import concurrent.futures
 
 app = Flask(__name__)
+
+CORS(app)
 
 ANCAP_GASOLINE = [
     {"name": "Super 95", "url": "https://www.ancap.com.uy/1636/1/super-95.html"},
